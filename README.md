@@ -2,10 +2,10 @@
 
 Projeto para o hackathon da Quero Educação
 
-### What is this repository for? ###
+### Colaboração e Comunicação ###
 
-* Quick summary
-* Version
+* Front em HTML, CSS, BOOTSTRAP
+* Back em Ruby on Raisl 4.2
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
