@@ -1,5 +1,5 @@
 class CadprojectController < ApplicationController
-  before_action :find_item, only: [:edit, :show, :update, :destroy]
+  #before_action :find_item, only: [:edit, :show, :update, :destroy]
   #before_action :authenticate_user!, except: [:index, :show]
   
   def index
@@ -17,7 +17,7 @@ class CadprojectController < ApplicationController
     @project = CadProjeto.new(cadproject_params)
 
     if @project.save
-      redirect_to @project
+      redirect_to 'index'
     else
       render 'new'
     end
@@ -38,7 +38,7 @@ class CadprojectController < ApplicationController
   private
 
   def cadproject_params
-    params.require(:cadproject).permit(:nome, :autor, :categoria, :descricao, :id)
+    params.require(:cad_project).permit(:nome, :autor, :categoria, :descricao, :id)
   end
 
   def find_item

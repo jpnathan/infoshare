@@ -12,20 +12,20 @@
 			</div>
 		<% end %>
 		<p>
-			<%= f.label :nome %><br>
-			<%= f.text_field :nome%>
+			<%= f.label :name %><br>
+			<%= f.text_field :name%>
 		</p>
 		<p>
-			<%= f.label :autor %><br>
-			<%= f.text_field :autor %>
+			<%= f.label :author %><br>
+			<%= f.text_field :author %>
 		</p>
 		<p>
-			<%= f.label :categoria %><br>
-			<%= f.select :categoria, ['Empresa Junior', 'TCC', 'Mentoria', 'Eventos'] %>
+			<%= f.label :category %><br>
+			<%= f.select :category, ['Empresa Junior', 'TCC', 'Mentoria', 'Eventos'] %>
 		</p>
 		<p>
-			<%= f.label :descricao %><br>
-			<%= f.text_area :descricao %>
+			<%= f.label :description %><br>
+			<%= f.text_area :description %>
 		</p>
 		<p>
 			<%= f.submit 'Cadastrar Projeto' %>

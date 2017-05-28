@@ -1,0 +1,18 @@
+<div>
+	<h1 class="title">
+		<%=	@project.name%>
+	</h1>
+
+	<p class="date">
+		Submitted <%= time_ago_in_words(@project.created_at) %> ago
+	</p>
+
+	<p class="body">
+		<%= @project.author %>
+		<%= @project.category %>
+	</p>
+
+	<dir id="comments">
+		<%= @project.description %>
+	</dir>
+</div>
