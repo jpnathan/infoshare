@@ -1,2 +1,9 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<% @projects.each do |project| %>
+	<div class="post_wrapper">
+		<h2 class="title"> <%= link_to project.name, project %> </h2>
+		<p class="body"> <%= project.author %></p>
+		<p class="body"> <%= project.category %></p>
+		<p class="body"> <%= truncate(project.description, length:100) %></p>
+		<p class="date"> <%= time_ago_in_words(project.created_at) %> ago </p>
+	</div>
+<% end %>
