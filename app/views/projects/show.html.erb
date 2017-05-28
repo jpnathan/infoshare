@@ -8,11 +8,15 @@
 	</p>
 
 	<p class="body">
-		<%= @project.author %>
-		<%= @project.category %>
+		Criado por: <strong><%= @project.author %></strong><br>
+		Categoria: <strong><%= @project.category %></strong>
 	</p>
 
-	<dir id="comments">
+	<div class="post_wrapper">
 		<%= @project.description %>
-	</dir>
+	</div>
+	<% if user_signed_in? %>
+	<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to 'Editar', edit_project_path(@project) %></button>
+	<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i><%= link_to 'Apagar', project_path(@project), method: :delete, data: {confirm: "Você tem certeza?"} %>
+	<% end -%>
 </div>

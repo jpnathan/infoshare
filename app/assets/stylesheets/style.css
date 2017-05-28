@@ -114,3 +114,7 @@ footer {
 	color: #777777;
 	font-size:  small;
 }
+
+.btn > a {
+	color:  #FFF;
+}

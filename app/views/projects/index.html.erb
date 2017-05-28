@@ -38,8 +38,9 @@
 					<h5 class="title"> <%= link_to project.name, project %> </h5>
 					<p class="date"> <%= time_ago_in_words(project.created_at) %> ago </p>
 					<p class="body">Categoria: <strong><%= project.category %></strong></p>
-					<p class="body"> <%= truncate(project.description, length:100) %></p>
-					
+					<p class="body"> <%= truncate(project.description, length:100) %><br><% if project.description.length > 100 %>
+					<%= link_to "Ver mais", project %></p>
+					<% end %>
 				</section>
 			</div>
 			<% end %>
