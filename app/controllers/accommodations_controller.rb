@@ -7,11 +7,11 @@ class AccommodationsController < ApplicationController
   end
 
   def new
-    @accomodation = Accommodation.new
+    @accomodation = current_user.accommodations.build
   end
 
   def create
-    @accomodation = Accommodation.new(accommodation_params)
+    @accomodation = current_user.accommodations.build(accommodation_params)
 
     if @accomodation.save
       redirect_to @accomodation

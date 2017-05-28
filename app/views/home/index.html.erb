@@ -1,6 +1,6 @@
 <div class="col-xs-12 col-md-8" id="timeline">
 
-	<% @accomodations.each do |acco| %>
+	<% @accomodations.first do |acco| %>
 		<div class="post_wrapper">
 			<figure>
 				<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
@@ -21,62 +21,63 @@
 		</div>
 	<% end %>
 		
+		
+	<% @transports.each do |trans| %>
+		<div class="post_wrapper">
+			<figure>
+				<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
+				<figcaption>
+					<h5 class="body"> <%= trans.contact %></h5>
+				</figcaption>
+			</figure>
 			
-				<% @transports.each do |trans| %>
-					<div class="post_wrapper">
-						<figure>
-							<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
-							<figcaption>
-								<h5 class="body"> <%= trans.contact %></h5>
-							</figcaption>
-						</figure>
-						
-						<section class="content-timeline">
-							<h5 class="title"> <%= link_to trans.category, trans %> </h5>
-							<p class="date"> <%= time_ago_in_words(trans.created_at) %> ago </p>
-							<p class="body"> <%= (trans.price) %>
-							<p class="body"> <%= truncate(trans.description, length:100) %><br>   <%if trans.description.length > 100 %>
-							<%= link_to "Ver mais", trans %></p>
-							<% end %>
-						</section>
-					</div>
+			<section class="content-timeline">
+				<h5 class="title"> <%= link_to trans.category, trans %> </h5>
+				<p class="date"> <%= time_ago_in_words(trans.created_at) %> ago </p>
+				<p class="body"> <%= (trans.price) %>
+				<p class="body"> <%= truncate(trans.description, length:100) %><br>   <%if trans.description.length > 100 %>
+				<%= link_to "Ver mais", trans %></p>
 				<% end %>
+			</section>
+		</div>
+	<% end %>
 
-			<% @projects.each do |project| %>
-				<div class="post_wrapper">
-					<figure>
-						<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
-						<figcaption>
-							<h5 class="body"> <%= project.author %></h5>
-						</figcaption>
-					</figure>
+	<% @projects.each do |project| %>
+		<div class="post_wrapper">
+			<figure>
+				<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
+				<figcaption>
+					<h5 class="body"> <%= project.author %></h5>
+				</figcaption>
+			</figure>
 
-					<section class="content-timeline">
-						<h5 class="title"> <%= link_to project.name, project %> </h5>
-						<p class="date"> <%= time_ago_in_words(project.created_at) %> ago </p>
-						<p class="body">Categoria: <strong><%= project.category %></strong></p>
-						<p class="body"> <%= truncate(project.description, length:100) %><br><% if project.description.length > 100 %>
-							<%= link_to "Ver mais", project %></p>
-							<% end %>
-					</section>
-				</div>
-			<% end %>
-
-		<% @jobs.each do |job| %>
-			<div class="post_wrapper">
-				<figure>
-					<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
-					<figcaption>
-						<h5 class="body"> <%= job.title %></h5>
-					</figcaption>
-				</figure>
-				
-				<section class="content-timeline">
-					<h5 class="title"> <%= link_to job.title, job %> </h5>
-					<p class="date"> <%= time_ago_in_words(job.created_at) %> ago </p>
-					<p class="body" style="white-space: pre-wrap"><%= truncate(job.requirements, length:100)%></p><% if job.requirements.length > 100 %>
-					<%=link_to "Ver mais", job %>
+			<section class="content-timeline">
+				<h5 class="title"> <%= link_to project.name, project %> </h5>
+				<p class="date"> <%= time_ago_in_words(project.created_at) %> ago </p>
+				<p class="body">Categoria: <strong><%= project.category %></strong></p>
+				<p class="body"> <%= truncate(project.description, length:100) %><br><% if project.description.length > 100 %>
+					<%= link_to "Ver mais", project %></p>
 					<% end %>
-				</section>
-			</div>
-		<% end %>
+			</section>
+		</div>
+	<% end %>
+
+	<% @jobs.each do |job| %>
+		<div class="post_wrapper">
+			<figure>
+				<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
+				<figcaption>
+					<h5 class="body"> <%= job.title %></h5>
+				</figcaption>
+			</figure>
+			
+			<section class="content-timeline">
+				<h5 class="title"> <%= link_to job.title, job %> </h5>
+				<p class="date"> <%= time_ago_in_words(job.created_at) %> ago </p>
+				<p class="body" style="white-space: pre-wrap"><%= truncate(job.requirements, length:100)%></p><% if job.requirements.length > 100 %>
+				<%=link_to "Ver mais", job %>
+				<% end %>
+			</section>
+		</div>
+	<% end %>
+</div>

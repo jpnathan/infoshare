@@ -3,22 +3,24 @@
 	<h1>Acomodação</h1>
 
 
-	<% @accomodations.each do |acco| %>
+	<% @accomodations.each do |accommodation| %>
 		<div class="post_wrapper">
 			<figure>
 				<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
 				<figcaption>
-					<h5 class="body"> <%= acco.contact %></h5>
+					<h5 class="body"> <%= accommodation.contact %></h5>
 				</figcaption>
 			</figure>
 
 			<section class="content-timeline">
-				<h5 class="title"> <%= link_to acco.category, acco %> </h5>
-				<p class="date"> <%= time_ago_in_words(acco.created_at) %> ago </p>
-				<p class="body"> <%= (acco.sex) %>
-				<p class="body"> <%= (acco.price) %>
-				<p class="body"> <%= truncate(acco.description, length:100) %><br><% if acco.description.length > 100 %>
-				<%= link_to "Ver mais", acco %></p>
+				<h5 class="title"> <%= link_to accommodation.category, accommodation %> </h5>
+				<p class="date"> <%= time_ago_in_words(accommodation.created_at) %> ago </p>
+				<p class="body"> <%= (accommodation.sex) %>
+				<p class="body"> <%= (accommodation.user.nome) %>
+				<p class="body"> <%= (accommodation.user.email) %>
+				<p class="body"> <%= (accommodation.price) %>
+				<p class="body"> <%= truncate(accommodation.description, length:100) %><br><% if accommodation.description.length > 100 %>
+				<%= link_to "Ver mais", accommodation %></p>
 				<% end %>
 			</section>
 		</div>
