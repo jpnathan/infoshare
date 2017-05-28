@@ -1,14 +1,15 @@
+<% if user_signed_in? %>
 <div class="col-xs-6 col-md-4" id="sidebar">
 	<div id="profile">
 		<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" alt="profile" class="img-circle"/>
 	</div>
 	<div class="menu-principal">
 		<ul>
-			<li><i class="fa fa-home" aria-hidden="true"></i><%= link_to "Home", projects_path %></li>
+			<li><i class="fa fa-home" aria-hidden="true"></i><%= link_to "Home", root_path %></li>
 			<li><i class="fa fa-globe" aria-hidden="true"></i><%= link_to "Projetos", projects_path %></li>
 			<li><i class="fa fa-briefcase" aria-hidden="true"></i><%= link_to "Jobs", jobs_path %></li>
 			<li><i class="fa fa-bed" aria-hidden="true"></i><%= link_to "Hospedagem", accommodations_path %></li>
-			<li><i class="fa fa-car" aria-hidden="true"></i><%= link_to "Transportes", projects_path %></li>
+			<li><i class="fa fa-car" aria-hidden="true"></i><%= link_to "Transportes", transports_path %></li>
 		</ul>
 	</div>
 	<hr>
@@ -19,3 +20,9 @@
 		</ul>
 	</div>
 </div>
+
+
+
+<% end -%>
+
+
