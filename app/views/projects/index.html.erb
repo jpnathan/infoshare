@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row">
 	<div class="col-xs-6 col-md-4" id="sidebar">
 		<div id="profile">
@@ -49,3 +50,14 @@
 	</div>
 
 
+=======
+<% @projects.each do |project| %>
+	<div class="post_wrapper">
+		<h2 class="title"> <%= link_to project.name, project %> </h2>
+		<p class="body"> <%= project.author %></p>
+		<p class="body"> <%= project.category %></p>
+		<p class="body"> <%= truncate(project.description, length:100) %></p>
+		<p class="date"> <%= time_ago_in_words(project.created_at) %> ago </p>
+	</div>
+<% end %>
+>>>>>>> 347f08f4e89520411126ca1c67837d6b9a7d2999
