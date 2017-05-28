@@ -11,8 +11,7 @@
 }
 
 #profile {
-	position: relative;
-	top: -65px;
+	margin: 35px 0;
 }
 
 #profile > .img-circle {
@@ -30,21 +29,13 @@ body {
 
 footer {
 	background-color: #169fb9;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	color: #FFF;
 	width: 100%;
 	text-align:  center;
 	padding: 10px;
-}
-
-#secoes li {
-	list-style: none;	
-	padding: 10px;
-}
-
-.fa {
-	padding-right: 10px;
+	margin-top: 20px;
 }
 
 #timeline {
@@ -79,6 +70,51 @@ footer {
 	margin:  0 auto;
 	text-align: center;
 }
+
+#secoes li, .menu-principal li {
+	list-style: none;	
+	padding: 10px;
+}
+
+.fa {
+	padding-right: 10px;
+}
+
+.livro {
+	display: inline-block;
+	width: 240px;
+	padding: 10px;
+}
+
+.capa img {
+	width: 210px;
+}
+
+.livro button {
+	width: 100%;
+}
+
 .thumbnail {
-	width:  50px;
+	width: 50px;
+}
+
+.post_wrapper {
+	background-color: #fff;
+	border: 1px solid #cecece;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.post_wrapper figcaption {
+	display: inline-block;
+    padding: 10px;
+    text-decoration: underline;
+}
+.date {
+	color: #777777;
+	font-size:  small;
+}
+
+.btn > a {
+	color:  #FFF;
 }
