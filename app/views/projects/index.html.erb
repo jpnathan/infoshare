@@ -1,2 +1,51 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<div class="row">
+	<div class="col-xs-6 col-md-4" id="sidebar">
+		<div id="profile">
+			<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" alt="profile" class="img-circle"/>
+		</div>
+		<div class="menu-principal">
+			<ul>
+				<li><a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i>
+					Home</a></li>
+					<li><a class="nav-link" href="projetos.html" style="color:#e74c3c"><i class="fa fa-globe" aria-hidden="true"></i>Projetos</a></li>
+					<li><a class="nav-link" href="jobs.html"><i class="fa fa-briefcase" aria-hidden="true"></i>Jobs</a></li>
+					<li><a class="nav-link" href="hospedagem.html"><i class="fa fa-bed" aria-hidden="true"></i>Hospedagem</a></li>
+					<li><a class="nav-link" href="transporte.html"><i class="fa fa-car" aria-hidden="true"></i>Transporte</a></li>
+				</ul>
+			</div>
+			<hr>
+			<div id="secoes">
+				<ul>
+					<li><a class="nav-link" href="biblioteca.html"><i class="fa fa-book" aria-hidden="true"></i>Biblioteca</a></li>
+					<li><a class="nav-link" href="grupo-estudos.html"><i class="fa fa-users" aria-hidden="true"></i>Grupo de Estudos</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-8" id="timeline">
+			<h1>Projetos</h1>
+			<figure>
+				<img src="https://scontent.fsjk2-1.fna.fbcdn.net/v/t1.0-9/16002978_1281072411972370_8311867439911504863_n.jpg?oh=10d416e5be5d8dfe5df2f00be2b2a7a4&oe=59AA0426" class="img-circle thumbnail">
+				<figcaption>
+					<h4><%= @project.author %></h4>
+				</figcaption>
+			</figure>
+			
+			<section class="content-timeline">
+				<h4 class="title"><strong><%= @project.name%></strong></h4>
+
+				<p class="date">
+					Submitted <%= time_ago_in_words(@project.created_at) %> ago
+				</p>
+
+				<p class="body">
+					<%= @project.category %>
+				</p>
+
+				<div id="comments">
+					<%= @project.description %>
+				</div>
+			</section>
+		</div>
+	</div>
+
+

@@ -79,6 +79,94 @@ footer {
 	margin:  0 auto;
 	text-align: center;
 }
+
+.navbar.navbar-toggleable-md.navbar-light.bg-faded {
+	background: #169fb9 !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+	color:  #FFF !important;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+#profile {
+	margin: 35px 0;
+}
+
+#profile > .img-circle {
+	width: 180px;
+	margin-left: 20%;
+}
+
+body {
+	background-color: #e9ebee !important;
+	}
+
+#sidebar {
+	border-right: 2px solid #FFF;
+}
+
+footer {
+	background-color: #169fb9;
+	position: relative;
+	bottom: 0;
+	color: #FFF;
+	width: 100%;
+	text-align:  center;
+	padding: 10px;
+}
+
+#secoes li, .menu-principal li {
+	list-style: none;	
+	padding: 10px;
+}
+
+.fa {
+	padding-right: 10px;
+}
+
+#timeline {
+	padding-top: 25px;	
+}
+
+#timeline > h1 {
+	text-align:  center;
+}
+
+#brand {
+	width: 170px;
+}
+
+.livro {
+	display: inline-block;
+	width: 240px;
+	padding: 10px;
+}
+
+.capa img {
+	width: 210px;
+}
+
+.livro button {
+	width: 100%;
+}
+
 .thumbnail {
-	width:  50px;
+	width: 50px;
+}
+
+.content-timeline {
+	background-color: #fff;
+	border: 1px solid #cecece;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.content-timeline figcaption {
+	display: inline-block;
+    padding: 10px;
+    text-decoration: underline;
 }
