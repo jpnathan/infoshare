@@ -46,3 +46,4 @@ group :development do
 end
 
 gem 'devise', '~> 4.3'
+gem 'simple_form', '~> 3.3', '>= 3.3.1'

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  #get 'home#index'
+  root 'home#index'
 
   devise_for :users
-  root 'home#index'
+  resources :cadproject
 
 end
