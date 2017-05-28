@@ -18,3 +18,5 @@
 
 # Ignore temporarios
 .tmp
+.log
+log/development
