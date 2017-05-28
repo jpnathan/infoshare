@@ -21,6 +21,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    #teste commit
   end
 
   def edit
