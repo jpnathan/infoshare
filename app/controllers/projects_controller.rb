@@ -1,8 +1,9 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :find_project, only: [:edit, :show, :update, :destroy]
 
   def index
-    @projects = Project.all.order('created_at DESC')
+    @project = Project.all.order('created_at DESC')
   end
 
   def new
@@ -26,9 +27,16 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    if @project.update(project_params)
+      redirect_to @project
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @project.destroy
+    redirect_to root_path
   end
 
   private
@@ -40,4 +48,5 @@ class ProjectsController < ApplicationController
   def find_project
     @project= Project.find(params[:id])
   end
+
 end
