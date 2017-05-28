@@ -1,0 +1,36 @@
+<div>
+	<%= form_for @accomodation do |f| %>
+
+		<% if @accomodation.errors.any? %>
+			<div>
+				<h2> <%= pluralize(@accomodation.errors.count, "Error")%> Stoped this post from saving </h2>
+				<ul>
+					<%= @accomodation.errors.full_messages.each do |msg| %>
+						<li> <%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+		<p>
+			<%= f.label :contact %><br>
+			<%= f.text_area :contact, size: "40x1" %>
+		</p>
+		<p>
+			<%= f.label :category %><br>
+			<%= f.select :category, ['Quarto', 'Casa', 'Apartamento', 'Quarto em Republica'] %>
+		</p>
+		<% ["Male", "Female"].each do |item| %> <%= f.radio_button :sex, item %> <%= item %><br /> <% end %>
+
+		<p>
+			<%= f.label :description %><br>
+			<%= f.text_area :description, size: "40x10" %>
+		</p>
+		<p>
+			<%= f.label :price %><br>
+			<%= f.number_field :price %>
+		</p>
+		<p>
+			<%= f.submit 'Cadastrar Vaga' %>
+		</p>
+	<% end %>
+</div>

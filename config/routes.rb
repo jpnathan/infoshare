@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :projects
   resources :jobs
-
+  resources :accommodations
 
 end
