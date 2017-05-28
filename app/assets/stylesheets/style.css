@@ -1,3 +1,7 @@
+a:hover {
+	text-decoration: none;
+}
+
 .navbar.navbar-toggleable-md.navbar-light.bg-faded {
 	background: #169fb9 !important;
 }
@@ -71,7 +75,7 @@ footer {
 	text-align: center;
 }
 
-#secoes li, .menu-principal li {
+.secoes li, .menu-principal li {
 	list-style: none;	
 	padding: 10px;
 }
@@ -118,3 +122,12 @@ footer {
 .btn > a {
 	color:  #FFF;
 }
+
+/*.menu-principal ul li a {
+	color:  #e74c3c;
+} */
+
+.menu-principal ul li i, .secoes ul li i {
+	color: #0275d8;
+}
+
