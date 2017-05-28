@@ -1,3 +1,6 @@
 <nav class="menu-login">
-  <a class="navbar-brand" href="#"><img src="/assets/logo.png" id="brand"></a>
+	<a class="navbar-brand" href="#"><img src="/assets/logo.png" id="brand"></a>
+
+	<div class="pull-right universidade">Centro Universitário de Volta Redonda - UniFOA <%= link_to '<i class="fa fa-sign-out" aria-hidden="true"></i>'.html_safe, destroy_user_session_path, :method => :delete %> 
+	</div>
 </nav>

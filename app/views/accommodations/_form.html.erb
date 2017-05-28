@@ -19,8 +19,9 @@
 			<%= f.label :category %><br>
 			<%= f.select :category, ['Quarto', 'Casa', 'Apartamento', 'Quarto em Republica'] %>
 		</p>
-		<% ["Male", "Female"].each do |item| %> <%= f.radio_button :sex, item %> <%= item %><br /> <% end %>
-
+		<p>Preferência por</p>
+		<% ["Male", "Female", "Indiferente"].each do |item| %> <%= f.radio_button :sex, item %> <%= item %><br><% end %>
+		<br>
 		<p>
 			<%= f.label :description %><br>
 			<%= f.text_area :description, size: "40x10" %>

@@ -15,8 +15,8 @@
 				<section class="content-timeline">
 					<h5 class="title"> <%= link_to job.title, job %> </h5>
 					<p class="date"> <%= time_ago_in_words(job.created_at) %> ago </p>
-					<p class="body"> <%= truncate(job.requirements, length:100) %><br><% if job.requirements.length > 100 %>
-					<%= link_to "Ver mais", job %></p>
+					<p class="body" style="white-space: pre-wrap"><%= truncate(job.requirements, length:100)%></p><% if job.requirements.length > 100 %>
+					<%=link_to "Ver mais", job %>
 					<% end %>
 				</section>
 			</div>
