@@ -31,7 +31,12 @@
 	</div>
 
 	<% if user_signed_in? %>
+
+
+	<button class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to "Eu Quero!", "http://localhost:3000", data: {confirm: "Obrigado pelo seu interesse! Já avisamos ao anunciante e em breve você receberá uma interação!"} %></button><br><br>
 	<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to 'Editar', edit_accommodation_path(@accomodation) %></button>
 	<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i><%= link_to 'Apagar', accommodation_path(@accomodation), method: :delete, data: {confirm: "Você tem certeza?"} %>
+
 		<% end -%>
+
 	</div>
