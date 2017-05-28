@@ -1,0 +1,24 @@
+<div class="col-xs-12 col-md-8" id="timeline">
+	<button class="btn btn-primary pull-right"><%= link_to "Ver Jobs", jobs_path %></button>
+	<h1 class="title">
+		<%=	@grupo.nome%>
+	</h1>
+
+	<p class="date">
+		Submitted <%= time_ago_in_words(@grupo.created_at) %> ago
+	</p>
+
+	<p class="post_wrapper" style="white-space: pre-line;"><strong>Disciplina:</strong><br>
+		<%= @grupo.disciplina %>
+	</p>
+
+	<div class="post_wrapper">
+		<p><strong>Autor</strong></p>
+		<%= @grupo.autor %>
+	</div>
+	<% if user_signed_in? %>
+	<button class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to "Eu Quero!", "http://localhost:3000", data: {confirm: "Obrigado pelo seu interesse! Já avisamos ao anunciante e em breve você receberá uma interação!"} %></button><br><br>
+	<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to 'Editar', edit_grupo_path(@grupo) %></button>
+	<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i><%= link_to 'Apagar', grupo_path(@grupo), method: :delete, data: {confirm: "Você tem certeza?"} %>
+	<% end -%>
+</div>
