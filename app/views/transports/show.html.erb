@@ -1,0 +1,28 @@
+<div class="col-xs-12 col-md-8" id="timeline">
+<button class="btn btn-primary pull-right"><%= link_to "Ver Transportes", transports_path %></button>
+	<h1 class="title">
+		<%=	@transport.category%>
+	</h1>
+
+	<p class="date">
+		Submitted <%= time_ago_in_words(@transport.created_at) %> ago
+	</p>
+
+	<p class="post_wrapper" style="white-space: pre-line;"><strong>Contato</strong><br>
+		<%= @transport.contact %>
+	</p>
+
+	<div class="post_wrapper">
+		<p><strong>Descrição</strong></p>
+		<%= @transport.description %>
+	</div>
+	<div class="post_wrapper">
+		<p><strong>Preço</strong></p>
+		<%= @transport.price %>
+	</div>
+
+	<% if user_signed_in? %>
+	<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to 'Editar', edit_transport_path(@transport) %></button>
+	<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i><%= link_to 'Apagar', transport_path(@transport), method: :delete, data: {confirm: "Você tem certeza?"} %>
+		<% end -%>
+	</div>
