@@ -11,8 +11,7 @@
 }
 
 #profile {
-	position: relative;
-	top: -65px;
+	margin: 35px 0;
 }
 
 #profile > .img-circle {
@@ -30,21 +29,13 @@ body {
 
 footer {
 	background-color: #169fb9;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	color: #FFF;
 	width: 100%;
 	text-align:  center;
 	padding: 10px;
-}
-
-#secoes li {
-	list-style: none;	
-	padding: 10px;
-}
-
-.fa {
-	padding-right: 10px;
+	margin-top: 20px;
 }
 
 #timeline {
@@ -80,45 +71,6 @@ footer {
 	text-align: center;
 }
 
-.navbar.navbar-toggleable-md.navbar-light.bg-faded {
-	background: #169fb9 !important;
-}
-
-.navbar-light .navbar-nav .active>.nav-link {
-	color:  #FFF !important;
-}
-
-.img-circle {
-	border-radius: 50%;
-}
-
-#profile {
-	margin: 35px 0;
-}
-
-#profile > .img-circle {
-	width: 180px;
-	margin-left: 20%;
-}
-
-body {
-	background-color: #e9ebee !important;
-	}
-
-#sidebar {
-	border-right: 2px solid #FFF;
-}
-
-footer {
-	background-color: #169fb9;
-	position: relative;
-	bottom: 0;
-	color: #FFF;
-	width: 100%;
-	text-align:  center;
-	padding: 10px;
-}
-
 #secoes li, .menu-principal li {
 	list-style: none;	
 	padding: 10px;
@@ -126,18 +78,6 @@ footer {
 
 .fa {
 	padding-right: 10px;
-}
-
-#timeline {
-	padding-top: 25px;	
-}
-
-#timeline > h1 {
-	text-align:  center;
-}
-
-#brand {
-	width: 170px;
 }
 
 .livro {
@@ -158,15 +98,19 @@ footer {
 	width: 50px;
 }
 
-.content-timeline {
+.post_wrapper {
 	background-color: #fff;
 	border: 1px solid #cecece;
 	padding: 20px;
 	margin: 20px 0;
 }
 
-.content-timeline figcaption {
+.post_wrapper figcaption {
 	display: inline-block;
     padding: 10px;
     text-decoration: underline;
+}
+.date {
+	color: #777777;
+	font-size:  small;
 }
