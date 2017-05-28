@@ -1,0 +1,81 @@
+.navbar.navbar-toggleable-md.navbar-light.bg-faded {
+	background: #169fb9 !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+	color:  #FFF !important;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+#profile {
+	position: relative;
+	top: -65px;
+}
+
+#profile > .img-circle {
+	width: 180px;
+	margin-left: 20%;
+}
+
+body {
+	background-color: #e9ebee !important;
+	}
+
+#sidebar {
+	border-right: 2px solid #FFF;
+}
+
+footer {
+	background-color: #169fb9;
+	position: absolute;
+	bottom: 0;
+	color: #FFF;
+	width: 100%;
+	text-align:  center;
+	padding: 10px;
+}
+
+#secoes li {
+	list-style: none;	
+	padding: 10px;
+}
+
+.fa {
+	padding-right: 10px;
+}
+
+#timeline {
+	padding-top: 25px;	
+}
+
+#timeline > h1 {
+	text-align:  center;
+}
+#painel-login {
+	background-image: url('images/fundo.png');
+}
+
+#brand {
+	width: 170px;
+}
+
+.navbar-light {
+	background: #;
+}
+
+.menu-login {
+	position: relative;
+	top:  0;
+	right: 0;
+	background-color: #169fb9;
+	width:  100%;
+	margin-bottom: 20px;
+}
+
+.form-login {
+	margin:  0 auto;
+	text-align: center;
+}
