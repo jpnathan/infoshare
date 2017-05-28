@@ -1,3 +1,10 @@
+<% if user_signed_in? %>
 <footer>
 	<p>&copy Todos os direitos reservados a infoShare</p>
 </footer>
+<% else %>
+<footer style="position: absolute !important;">
+	<p>&copy Todos os direitos reservados a infoShare</p>
+</footer>
+<% end %>
+
