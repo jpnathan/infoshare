@@ -1,0 +1,21 @@
+<div>
+	<h1 class="title">
+		<%=	@job.title%>
+	</h1>
+
+	<p class="date">
+		Submitted <%= time_ago_in_words(@job.created_at) %> ago
+	</p>
+
+	<p class="body">
+		Requisitos: <strong><%= @job.requirements %></strong>
+	</p>
+
+	<div class="post_wrapper">
+		<%= @job.description %>
+	</div>
+	<% if user_signed_in? %>
+	<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to 'Editar', edit_job_path(@job) %></button>
+	<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i><%= link_to 'Apagar', job_path(@job), method: :delete, data: {confirm: "Você tem certeza?"} %>
+	<% end -%>
+</div>
