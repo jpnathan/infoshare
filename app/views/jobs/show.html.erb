@@ -1,4 +1,4 @@
-<div>
+<div class="col-xs-12 col-md-8" id="timeline">
 	<h1 class="title">
 		<%=	@job.title%>
 	</h1>
@@ -7,11 +7,12 @@
 		Submitted <%= time_ago_in_words(@job.created_at) %> ago
 	</p>
 
-	<p class="body">
-		Requisitos: <strong><%= @job.requirements %></strong>
+	<p class="post_wrapper" style="white-space: pre-line;"><strong>Requisitos:</strong><br>
+		<%= @job.requirements %>
 	</p>
 
 	<div class="post_wrapper">
+		<p><strong>Descrição</strong></p>
 		<%= @job.description %>
 	</div>
 	<% if user_signed_in? %>
