@@ -1,15 +1,15 @@
-<div>
+<div class="col-xs-12 col-md-8" id="timeline">
 	<h1 class="title">
 		<%=	@project.name%>
 	</h1>
 
 	<p class="date">
-		Submitted <%= time_ago_in_words(@project.created_at) %> ago
+		Postado a <%= time_ago_in_words(@project.created_at) %> atrás
 	</p>
 
 	<p class="body">
-		Criado por: <strong><%= @project.author %></strong><br>
-		Categoria: <strong><%= @project.category %></strong>
+		<strong>Criado por: </strong><%= @project.author %><br>
+		<strong>Categoria: </strong><%= @project.category %>
 	</p>
 
 	<div class="post_wrapper">
