@@ -1,7 +1,3 @@
 class HomeController < ApplicationController
-  
-  def index
-  	render 'login'
-  end
-
+	before_action :authenticate_user!
 end
