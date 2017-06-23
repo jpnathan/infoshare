@@ -1,29 +1,24 @@
 # Hackathon Code-in-quero #
 
-Projeto para o hackathon da Quero Educação
+Projeto para o hackathon da Quero Educação, onde foi desenvolvido um rede social para alunos e ex-alunos se comunicarem, trocarem contatos, disponibilizarem mentorias, grupos de estudos, vagas em republicas e vans.
 
 ### Colaboração e Comunicação ###
 
 * Front em HTML, CSS, BOOTSTRAP
 * Back em Ruby on Rails 4.2
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Javascript
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Clone de Repo
+* Run "Bundle install"
 
 ### Contribution guidelines ###
 
-* Writing tests
 * Code review
-* Other guidelines
+* Pair programing
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Repo owner or admin (Phillip Freitas)
+* Co-produtor (Douglas Maia)
